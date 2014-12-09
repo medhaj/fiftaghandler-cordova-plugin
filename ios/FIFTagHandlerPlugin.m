@@ -14,6 +14,7 @@
 #import "TAGContainer.h"
 #import "TAGContainerOpener.h"
 #import "TAGManager.h"
+#import "TAGDataLayer.h"
 
 //FIFTagHandler
 #import <FIFTagHandler/FIFTagHandler.h>
