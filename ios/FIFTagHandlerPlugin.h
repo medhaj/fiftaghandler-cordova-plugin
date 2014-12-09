@@ -14,6 +14,7 @@
 }
 
 - (void) setContainerId: (CDVInvokedUrlCommand*)command;
+- (void) push: (CDVInvokedUrlCommand*)command;
 - (void) setTrackingId: (CDVInvokedUrlCommand*)command;
 - (void) setLogLevel: (CDVInvokedUrlCommand*)command;
 - (void) setIDFAEnabled: (CDVInvokedUrlCommand*)command;

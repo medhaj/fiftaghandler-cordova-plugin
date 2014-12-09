@@ -45,13 +45,30 @@
                                                   container:container];
     
 
-    // Init facebook and Mobile app tracker
-    TAGDataLayer *dataLayer = [[FIFTagHandler sharedHelper] tagManager].dataLayer;
-    [dataLayer push:@{@"event":@"applicationStart"}];
+    
 
 
     result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:result callbackId:[command callbackId]];
+}
+
+- (void) push: (CDVInvokedUrlCommand*)command
+{
+  CDVPluginResult* result = nil;
+  NSString* key = [command.arguments objectAtIndex:0];
+  NSString* value = [command.arguments objectAtIndex:1];
+
+
+  // Fetch the datalayer
+  TAGDataLayer *dataLayer = [[FIFTagHandler sharedHelper] tagManager].dataLayer;
+  if (!dataLayer) {
+    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"FIFTagHandler not initialized"];
+  } else {
+    [dataLayer push:@{key:value}];
+    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+  }
+
+  [self.commandDelegate sendPluginResult:result callbackId:[command callbackId]];
 }
 
 - (void) setTrackingId: (CDVInvokedUrlCommand*)command

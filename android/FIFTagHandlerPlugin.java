@@ -134,15 +134,21 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
                 }
 
                 FIFTagHandler.getInstance().register();
-
-                // Init FA
-                DataLayer dataLayer = FIFTagHandler.getInstance().getTagManager().getDataLayer();
-
-                Map<String, Object> map = new HashMap<String, Object>();
-                map.put("event", "applicationStart");
-                map.push(map);
             }
         }, 2, TimeUnit.SECONDS);
+    }
+
+    private void push(String key, String value) {
+        // Fetch the datalayer
+        DataLayer dataLayer = FIFTagHandler.getInstance().getTagManager().getDataLayer();
+        if (datalayer == null) {
+            throw new IllegalStateException("FIFTagHelper not initialized. Call setContainerId.");
+        }
+        else {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put(key, value);
+            map.push(map);
+        }
     }
 
     private void setTrackingId(String trackingId) {
