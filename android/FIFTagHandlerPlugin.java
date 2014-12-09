@@ -1,23 +1,11 @@
-/*
- Licensed to the Apache Software Foundation (ASF) under one
- or more contributor license agreements.  See the NOTICE file
- distributed with this work for additional information
- regarding copyright ownership.  The ASF licenses this file
- to you under the Apache License, Version 2.0 (the
- "License"); you may not use this file except in compliance
- with the License.  You may obtain a copy of the License at
- 
- http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing,
- software distributed under the License is distributed on an
- "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- KIND, either express or implied.  See the License for the
- specific language governing permissions and limitations
- under the License.
- */
+//
+//  FIFTagHandlerPlugin
+//  Fifty-five
+//
+//  Created by Med on 09/12/14.
+//  Copyright (c) 2014 Med. All rights reserved.
 
-package com.cmackay.plugins.googleanalytics;
+package com.fifty-five.fiftaghandler.cordova;
 
 import com.google.android.gms.analytics.Logger.LogLevel;
 import com.google.android.gms.analytics.Tracker;
@@ -37,7 +25,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class GoogleAnalyticsPlugin extends CordovaPlugin {
+public class FIFTagHandlerPlugin extends CordovaPlugin {
     
     private static GoogleAnalytics ga;
     private static Tracker tracker;
