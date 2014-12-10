@@ -47,8 +47,6 @@
     <header-file src="ios/FIFTagHandlerPlugin.h" />
     <source-file src="ios/FIFTagHandlerPlugin.m" />
 
-    <framework src="ios/MobileAppTracker.framework" custom="true" />
-    <framework src="ios/FacebookSDK.framework" custom="true" />
     <framework src="ios/FIFTagHandler.framework" custom="true" />
 
 
