@@ -3,8 +3,8 @@ FIFTagHandler cordova plugin
 
 * [Introduction](#introduction)
 * [Installation](#installation)
-* [Getting started](#getting_started)
-* [Tracker reference](#tracker_reference)
+* [Getting started](#getting-started)
+* [Tracker reference](#tracker-reference)
 
 ## Introduction
 
