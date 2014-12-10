@@ -1,6 +1,12 @@
 FIFTagHandler cordova plugin
 ============================
 
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Getting started](#getting_started)
+* [Tracker reference](#tracker_reference)
+
+## Introduction
 
 This plugin provides Apache Cordova/Phonegap support for the FIFTagHandler using the native sdks for Android & iOS. The FIFTagHandler SDK is a wrapper above the Google Tag Manager SDK. It enable iOS/Android developers to track their apps using only GTM. The FIFTagHandler SDK currently support the following trackers: Google Analytics, Facebook, Localytics, ATInternet, MobileAppTracker and Follow Analtics.
 
@@ -10,6 +16,7 @@ This plugin provides support for some of the most specific analytics functions (
 
 ## Installation
 
+### Using the CLI [Android Only]
 To install the FIFTagHandler plugin in your app, use the following command-line
 
 ```shell
@@ -18,6 +25,19 @@ To install the FIFTagHandler plugin in your app, use the following command-line
 
 ```
 
+
+### Cordova Registry Warning [iOS]
+
+
+Installing this plugin directly from Cordova Registry results in Xcode using a broken FIFTagHandler.framework, this is because the current publish procedure to NPM breaks symlinks [CB-6092](https://issues.apache.org/jira/browse/CB-6092). Please install the plugin through a locally cloned copy or from the [plugin git repository](https://github.com/MedHaj/fiftaghandler-cordova-plugin) using the following command
+
+```shell
+
+	cordova plugin add https://github.com/MedHaj/fiftaghandler-cordova-plugin
+
+```
+
+## Getting started
 
 #### Initialize the FIFTagHandler SDK
 
