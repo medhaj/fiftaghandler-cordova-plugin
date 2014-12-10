@@ -16,7 +16,7 @@ This plugin provides support for some of the most specific analytics functions (
 
 ## Installation
 
-### Using the CLI [Android Only]
+### Using the Cordova CLI [Android Only]
 To install the FIFTagHandler plugin in your app, use the following command-line
 
 ```shell
@@ -33,7 +33,7 @@ Installing this plugin directly from Cordova Registry results in Xcode using a b
 
 ```shell
 
-	cordova plugin add https://github.com/MedHaj/fiftaghandler-cordova-plugin
+	cordova plugin add https://github.com/MedHaj/fiftaghandler-cordova-plugin.git
 
 ```
 
