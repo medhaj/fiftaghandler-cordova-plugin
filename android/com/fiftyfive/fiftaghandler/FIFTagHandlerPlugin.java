@@ -9,7 +9,6 @@ package com.fiftyfive.fiftaghandler;
 
 
 import com.fiftyfive.fiftaghandler.FIFTagHandler;
-import com.fiftyfive.fiftaghandler.R;
 
 import android.content.Context;
 
