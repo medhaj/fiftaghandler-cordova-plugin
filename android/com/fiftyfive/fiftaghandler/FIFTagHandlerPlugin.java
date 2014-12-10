@@ -9,6 +9,13 @@ package com.fiftyfive.fiftaghandler;
 
 
 import com.fiftyfive.fiftaghandler.FIFTagHandler;
+import com.fiftyfive.fiftaghandler.R;
+
+import android.content.Context;
+
+import java.util.concurrent.TimeUnit;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
@@ -115,7 +122,9 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
     
     private void setContainerId(String containerId) {
         //Launch Tag Manager
-        final TagManager tagManager = TagManager.getInstance(this);
+
+        Context context = this.cordova.getActivity().getApplicationContext();
+        final TagManager tagManager = TagManager.getInstance(context);
 
         // Modify the log level of the logger to print out not only
         // warning and error messages, but also verbose, debug, info messages.
@@ -123,7 +132,7 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
 
         //Launch FFTagHelper
         FIFTagHandler.getInstance().setTagManager(tagManager);
-        FIFTagHandler.getInstance().setApplicationContext(getApplicationContext());
+        FIFTagHandler.getInstance().setApplicationContext(context);
 
 
         //GTM
@@ -149,13 +158,13 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
     private void push(String key, String value) {
         // Fetch the datalayer
         DataLayer dataLayer = FIFTagHandler.getInstance().getTagManager().getDataLayer();
-        if (datalayer == null) {
+        if (dataLayer == null) {
             throw new IllegalStateException("FIFTagHelper not initialized. Call setContainerId.");
         }
         else {
             Map<String, Object> map = new HashMap<String, Object>();
             map.put(key, value);
-            map.push(map);
+            dataLayer.push(map);
         }
     }
 
