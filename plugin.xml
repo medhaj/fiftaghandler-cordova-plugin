@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  id="com.fifty-five.fiftaghandler"
+  id="com.fiftyfive.fiftaghandler"
   version="0.0.2">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
@@ -11,7 +11,7 @@
   <description>Plugin for FIFTagHandler Native SDKs (Android, iOS)</description>
   <author>Med Hajlaoui</author>
   <license>Apache 2.0</license>
-  <keywords>cordova,fifty-five,gtm,ga,tracking</keywords>
+  <keywords>cordova,fifty,five,gtm,ga,tracking</keywords>
   <repo>https://github.com/medhaj/fiftaghandler-cordova-plugin.git</repo>
 
   <js-module src="www/fiftaghandler.js" name="FIFTagHandler">
