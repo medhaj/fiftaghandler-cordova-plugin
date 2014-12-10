@@ -2,8 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="com.fifty-five.fiftaghandler"
-  version="0.0.1">
-
+  version="0.0.2">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
   </engines>
@@ -66,7 +65,7 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="FIFTagHandler">
-        <param name="android-package" value="com.fifty-five.fiftaghandler.cordova.FIFTagHandlerPlugin" />
+        <param name="android-package" value="com.fiftyfive.fiftaghandler.FIFTagHandlerPlugin" />
       </feature>
     </config-file>
 
@@ -79,11 +78,11 @@
       <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     </config-file>
 
-    <source-file src="android/FIFTagHandlerPlugin.java" target-dir="src/com/fifty-five/fiftaghandler/cordova/" />
-    <source-file src="android/google-play-services.jar" target-dir="libs" />
-    <source-file src="android/FIFTagHandler.jar" target-dir="libs" />
-    <source-file src="android/MAT.jar" target-dir="libs" />
-    <source-file src="android/version.xml" target-dir="res/values" />
+    <source-file src="android/com/fiftyfive/fiftaghandler/FIFTagHandlerPlugin.java" target-dir="src/com/fiftyfive/fiftaghandler/" />
+    <source-file src="android/com/fiftyfive/fiftaghandler/google-play-services.jar" target-dir="libs" />
+    <source-file src="android/com/fiftyfive/fiftaghandler/FIFTagHandler.jar" target-dir="libs" />
+    <source-file src="android/com/fiftyfive/fiftaghandler/MobileAppTracker.jar" target-dir="libs" />
+    <source-file src="android/com/fiftyfive/fiftaghandler/version.xml" target-dir="res/values" />
 
     <proguard-config>
 -keep class * extends java.util.ListResourceBundle {
