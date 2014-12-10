@@ -79,7 +79,6 @@
     <asset src="android/com/fiftyfive/fiftaghandler/fiftaghandler.properties" target="res/raw/fiftaghandler.properties" />
     <asset src="android/com/fiftyfive/fiftaghandler/gtm_default_container" target="res/raw/gtm_default_container" />
 
-
     <source-file src="android/com/fiftyfive/fiftaghandler/FIFTagHandlerPlugin.java" target-dir="src/com/fiftyfive/fiftaghandler/" />
     <source-file src="android/com/fiftyfive/fiftaghandler/google-play-services.jar" target-dir="libs" />
     <source-file src="android/com/fiftyfive/fiftaghandler/FIFTagHandler.jar" target-dir="libs" />
