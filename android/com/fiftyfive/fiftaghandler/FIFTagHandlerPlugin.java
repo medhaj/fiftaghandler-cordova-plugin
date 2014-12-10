@@ -5,8 +5,16 @@
 //  Created by Med on 09/12/14.
 //  Copyright (c) 2014 Med. All rights reserved.
 
-package com.fifty-five.fiftaghandler.cordova;
+package com.fiftyfive.fiftaghandler;
 
+
+import com.fiftyfive.fiftaghandler.FIFTagHandler;
+
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.tagmanager.ContainerHolder;
+import com.google.android.gms.tagmanager.DataLayer;
+import com.google.android.gms.tagmanager.TagManager;
 import com.google.android.gms.analytics.Logger.LogLevel;
 import com.google.android.gms.analytics.Tracker;
 import com.google.android.gms.analytics.GoogleAnalytics;
